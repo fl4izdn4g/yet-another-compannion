@@ -1,0 +1,11 @@
+﻿@{
+    ViewBag.Title = "Gratulacje! Oto Twoja nagroda...";
+}
+<div style="text-align: center">
+    <h1 class="main-header">@ViewBag.Title</h1>
+    <h4>Uważnie oglądnij ten filmik, ponieważ jest w nim ukryta niespodzianka</h4>
+
+    <iframe width="853" height="480" src="https://www.youtube.com/embed/a-xWhG4UU_Y?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+
+    <p class="hidden-treasure">Zgrywam się :P<br /> Prawdziwa nagroda jest <a href="@Url.Action("GimmeMyPrize")">tutaj</a></p>
+</div>

@@ -1,0 +1,30 @@
+﻿@model  Princess.Models.GimmeMyPrize
+@{
+    ViewBag.Title = "Jeszcze tylko kod dostępu...";
+}
+<h1 class="main-header">@ViewBag.Title</h1>
+<h4 style="margin-bottom: 30px">Pamiętaj nie ma lekko... Wszelkie rozwiązania rodzą się w bólach...</h4>
+
+@using (Html.BeginForm("GimmeMyPrize", "Home", FormMethod.Post, new { id = "Tajemnica", @class = "form-inline" }))
+{
+    <div style="margin: 0 auto; width: 500px">
+        <div class="row" style="margin: 0 auto; width: 410px;">
+            <div class="form-group">
+                @Html.TextBoxFor(m => m.PartOne, new { @class = "form-control input-lg input-larger-text" })
+            </div>
+            <div class="form-group">
+                @Html.TextBoxFor(m => m.PartTwo, new { @class = "form-control input-lg input-larger-text" })
+            </div>
+            <div class="form-group">
+                @Html.TextBoxFor(m => m.PartThree, new { @class = "form-control input-lg input-larger-text" })
+            </div>
+            <div class="form-group">
+                @Html.TextBoxFor(m => m.PartFour, new { @class = "form-control input-lg input-larger-text" })
+            </div>
+        </div>
+
+        <div class="row" style="margin-top: 50px;">
+            <button type="submit" class="btn btn-success btn-lg" style="display: block; width: 100%">Odbierz nagrodę</button>
+        </div>
+    </div>
+}

@@ -1,0 +1,131 @@
+﻿@model  Princess.Models.Mystery
+@{
+    ViewBag.Title = "I challenge you...";
+}
+<div style="text-align:center; margin-bottom: 30px">
+    <img src="~/Content/Images/lock_128.png" />
+    <h1 class="main-header">Panno Anno specjalnie dla Ciebie :*</h1>
+    <h4>Wpisz w odpowiednie miejsca rozwiązania, aby odblokować niespodziankę...</h4>
+</div>
+@using (Html.BeginForm("Index", "Home", FormMethod.Post, new { id = "Tajemnica" }))
+{
+    <div class="row">
+        <div class="col-md-4">
+            <h2>01.
+                @if (ViewBag.ClueValid["Clue1"])
+                {
+                    <span class="glyphicon glyphicon-ok green-ok"></span>
+                }
+            </h2>
+            <div class="form-group">
+                @Html.TextBoxFor(m => m.Clue1, new { @class = "form-control input-lg" })
+
+            </div>
+        </div>
+        <div class="col-md-4">
+            <h2>02.
+                @if (ViewBag.ClueValid["Clue2"])
+                {
+                    <span class="glyphicon glyphicon-ok green-ok"></span>
+                }
+            </h2>
+            <div class="form-group">
+                @Html.TextBoxFor(m => m.Clue2, new { @class = "form-control input-lg" })
+                
+            </div>
+        </div>
+        <div class="col-md-4">
+            <h2>03.
+                @if (ViewBag.ClueValid["Clue3"])
+                {
+                    <span class="glyphicon glyphicon-ok green-ok"></span>
+                }
+            </h2>
+            <div class="form-group">
+                @Html.TextBoxFor(m => m.Clue3, new { @class = "form-control input-lg" })
+               
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <h2>04. 
+                @if (ViewBag.ClueValid["Clue4"])
+                {
+                    <span class="glyphicon glyphicon-ok green-ok"></span> 
+                }
+            </h2>
+            <div class="form-group"> 
+                @Html.TextBoxFor(m => m.Clue4, new { @class = "form-control input-lg" })
+                
+            </div>
+        </div>
+        <div class="col-md-4">
+            <h2>05.
+                @if (ViewBag.ClueValid["Clue5"])
+                {
+                    <span class="glyphicon glyphicon-ok green-ok"></span>
+                }
+            </h2>
+            <div class="form-group">
+                @Html.TextBoxFor(m => m.Clue5, new { @class = "form-control input-lg" })
+                
+            </div>
+        </div>
+        <div class="col-md-4">
+            <h2>06.
+                @if (ViewBag.ClueValid["Clue6"])
+                {
+                    <span class="glyphicon glyphicon-ok green-ok"></span>
+                }
+            </h2>
+            <div class="form-group">
+                @Html.TextBoxFor(m => m.Clue6, new { @class = "form-control input-lg" })
+               
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <h2>07.
+                @if (ViewBag.ClueValid["Clue7"])
+                {
+                    <span class="glyphicon glyphicon-ok green-ok"></span>
+                }
+            </h2>
+            <div class="form-group">
+                @Html.TextBoxFor(m => m.Clue7, new { @class = "form-control input-lg" })
+               
+            </div>
+        </div>
+        <div class="col-md-4">
+            <h2>08.
+                @if (ViewBag.ClueValid["Clue8"])
+                {
+                    <span class="glyphicon glyphicon-ok green-ok"></span>
+                }
+            </h2>
+            <div class="form-group">
+                @Html.TextBoxFor(m => m.Clue8, new { @class = "form-control input-lg" })
+               
+            </div>
+        </div>
+        <div class="col-md-4">
+            <h2>09.
+                @if (ViewBag.ClueValid["Clue9"])
+                {
+                    <span class="glyphicon glyphicon-ok green-ok"></span>
+                }
+            </h2>
+            <div class="form-group">
+                @Html.TextBoxFor(m => m.Clue9, new { @class = "form-control input-lg" })
+                
+            </div>
+        </div>
+    </div>
+    <div class="row" style="margin-top: 50px;">
+        <div class="col-md-8 col-md-offset-2">
+            <button type="submit" class="btn btn-success btn-lg" style="display: block; width: 100%">Odblokuj niespodziankę</button>
+        </div>
+    </div>
+}
